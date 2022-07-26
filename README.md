@@ -1,2 +1,4 @@
 # StateOfChargeEstimator
-A simple algorithm that can be used in a formula student car during an Endurance event. This algorithm produces an estimate of the battery percentage at the end of the set distance.
+A simple algorithm that can be used in a formula student car during an Endurance event. This algorithm produces an estimate of the battery percentage at the end of the set distance. The .slx files contains the simulink model of the algorithm.
+
+The basic concept is to calculate the weighted average of the power delivered and regenerated in the last 120 seconds (about 2 laps). After that we project the consumption on the distance still to be traveled so we can get how many kWh we would have consumed at the end of the Endurance with the same race pace. Thanks to a simple proportion, the output is displayed as a percentage of the arrival battery. This data is a useful indicator on the race pace, it can be used in an automatic derating strategy or as a simple data in telemetry output to ensure that the rest of the team outside the car can make decisions on what to do
